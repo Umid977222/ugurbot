@@ -13,7 +13,7 @@ async def prod(message: types.Message):
     res = await fetch()
     for x in res:
         name = x['product']
-        if x['category'] == 'ICE SHOW':
+        if x['category'] == '12':
             keyboard.add(types.KeyboardButton(text=name))
     keyboard.add(types.KeyboardButton(text="Go Back."))
     await message.answer(
@@ -27,7 +27,7 @@ async def prod(message: types.Message):
     res = await fetch()
     for x in res:
         name = x['product']
-        if x['category'] == 'CABINETS':
+        if x['category'] == '2':
             keyboard.add(types.KeyboardButton(text=name))
     keyboard.add(types.KeyboardButton(text="Go Back."))
     await message.answer(
@@ -46,7 +46,7 @@ async def prod1(message: types.Message):
     res = await fetch()
     for x in res:
         name = x['product']
-        if x['category'] == 'CONDITIONERS':
+        if x['category'] == '5':
             keyboard.add(types.KeyboardButton(text=name))
     keyboard.add(types.KeyboardButton(text="Go Back."))
     await message.answer(
@@ -65,7 +65,7 @@ async def prod2(message: types.Message):
     res = await fetch()
     for x in res:
         name = x['product']
-        if x['category'] == 'DISPENSERS':
+        if x['category'] == '9':
             keyboard.add(types.KeyboardButton(text=name))
     keyboard.add(types.KeyboardButton(text="Go Back."))
     await message.answer(
@@ -84,7 +84,7 @@ async def prod3(message: types.Message):
     res = await fetch()
     for x in res:
         name = x['product']
-        if x['category'] == 'ICE MACHINES':
+        if x['category'] == '13':
             keyboard.add(types.KeyboardButton(text=name))
     keyboard.add(types.KeyboardButton(text="Go Back."))
     await message.answer(
@@ -103,7 +103,7 @@ async def prod4(message: types.Message):
     res = await fetch()
     for x in res:
         name = x['product']
-        if x['category'] == 'WATER':
+        if x['category'] == '21':
             keyboard.add(types.KeyboardButton(text=name))
     keyboard.add(types.KeyboardButton(text="Go Back."))
     await message.answer(
@@ -121,7 +121,7 @@ async def prod5(message: types.Message):
     res = await fetch()
     for x in res:
         name = x['product']
-        if x['category'] == 'MICRO':
+        if x['category'] == '14':
             keyboard.add(types.KeyboardButton(text=name))
     keyboard.add(types.KeyboardButton(text="Go Back."))
     await message.answer(

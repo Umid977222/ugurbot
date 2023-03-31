@@ -34,7 +34,7 @@ async def choice_lan(message: types.Message):
     res = await fetch()
     for x in res:
         name = x['product']
-        if x['category'] == 'CONSERVATORS':
+        if x['category'] == '6':
             keyboard.add(types.KeyboardButton(text=name))
     keyboard.add(types.KeyboardButton(text="Go Back."))
     await message.answer(
@@ -48,7 +48,7 @@ async def choice_lan1(message: types.Message):
     res = await fetch()
     for x in res:
         name = x['product']
-        if x['category'] == 'CHEST FREEZERS':
+        if x['category'] == '3':
             keyboard.add(types.KeyboardButton(text=name))
     keyboard.add(types.KeyboardButton(text="Go Back."))
     await message.answer(
@@ -62,7 +62,7 @@ async def choice_lan2(message: types.Message):
     res = await fetch()
     for x in res:
         name = x['product']
-        if x['category'] == 'ENERGY EFFICIENT':
+        if x['category'] == '10':
             keyboard.add(types.KeyboardButton(text=name))
     keyboard.add(types.KeyboardButton(text="Go Back."))
     await message.answer(
@@ -76,7 +76,7 @@ async def choice_lan3(message: types.Message):
     res = await fetch()
     for x in res:
         name = x['product']
-        if x['category'] == 'UPRIGHT FREEZERS':
+        if x['category'] == '16':
             keyboard.add(types.KeyboardButton(text=name))
     keyboard.add(types.KeyboardButton(text="Go Back."))
     await message.answer(
@@ -100,7 +100,7 @@ async def choice_las(message: types.Message):
     res = await fetch()
     for x in res:
         name = x['product']
-        if x['category'] == 'COUNTER COOLERS':
+        if x['category'] == '7':
             keyboard.add(types.KeyboardButton(text=name))
     keyboard.add(types.KeyboardButton(text="Go_Back."))
     await message.answer(
@@ -114,7 +114,7 @@ async def choice_las1(message: types.Message):
     res = await fetch()
     for x in res:
         name = x['product']
-        if x['category'] == 'CHEST COOLERS':
+        if x['category'] == '4':
             keyboard.add(types.KeyboardButton(text=name))
     keyboard.add(types.KeyboardButton(text="Go_Back."))
     await message.answer(
@@ -128,7 +128,7 @@ async def choice_las2(message: types.Message):
     res = await fetch()
     for x in res:
         name = x['product']
-        if x['category'] == 'CAN COOLERS':
+        if x['category'] == '1':
             keyboard.add(types.KeyboardButton(text=name))
     keyboard.add(types.KeyboardButton(text="Go_Back."))
     await message.answer(
@@ -147,7 +147,7 @@ async def choice_lang4(message: types.Message):
     res = await fetch()
     for x in res:
         name = x['product']
-        if x['category'] == 'DOOR COOLERS':
+        if x['category'] == '8':
             keyboard.add(types.KeyboardButton(text=name))
     keyboard.add(types.KeyboardButton(text="Go Back->"))
     await message.answer(
@@ -166,7 +166,7 @@ async def choice_lang5(message: types.Message):
     res = await fetch()
     for x in res:
         name = x['product']
-        if x['category'] == 'PREMIUM COOLERS':
+        if x['category'] == '15':
             keyboard.add(types.KeyboardButton(text=name))
     keyboard.add(types.KeyboardButton(text="Go Back->"))
     await message.answer(
@@ -185,7 +185,7 @@ async def choice_lang6(message: types.Message):
     res = await fetch()
     for x in res:
         name = x['product']
-        if x['category'] == 'SUB-ZERO':
+        if x['category'] == '17':
             keyboard.add(types.KeyboardButton(text=name))
     keyboard.add(types.KeyboardButton(text="Go Back->"))
     await message.answer(
@@ -209,7 +209,7 @@ async def choice_lad(message: types.Message):
     res = await fetch()
     for x in res:
         name = x['product']
-        if x['category'] == 'FRONT COOLERS':
+        if x['category'] == '11':
             keyboard.add(types.KeyboardButton(text=name))
     keyboard.add(types.KeyboardButton(text="GoBack."))
     await message.answer(
@@ -223,7 +223,7 @@ async def choice_lad1(message: types.Message):
     res = await fetch()
     for x in res:
         name = x['product']
-        if x['category'] == 'SUPERMARKET FREEZERS':
+        if x['category'] == '18':
             keyboard.add(types.KeyboardButton(text=name))
     keyboard.add(types.KeyboardButton(text="GoBack."))
     await message.answer(
@@ -237,7 +237,7 @@ async def choice_lad2(message: types.Message):
     res = await fetch()
     for x in res:
         name = x['product']
-        if x['category'] == 'SUPERMARKET COOLERS':
+        if x['category'] == '19':
             keyboard.add(types.KeyboardButton(text=name))
     keyboard.add(types.KeyboardButton(text="GoBack."))
     await message.answer(
@@ -251,7 +251,7 @@ async def choice_lad2(message: types.Message):
     res = await fetch()
     for x in res:
         name = x['product']
-        if x['category'] == 'POOL TYPE':
+        if x['category'] == '20':
             keyboard.add(types.KeyboardButton(text=name))
     keyboard.add(types.KeyboardButton(text="GoBack."))
     await message.answer(
@@ -267,6 +267,7 @@ async def lang(message: types.Message):
         name = x['product']
         description = x['description']
         if mes == x['product']:
+            await message.answer_photo(x['img'])
             await message.answer(f'{name}'
                                  f'\n{description}'
                                  )
